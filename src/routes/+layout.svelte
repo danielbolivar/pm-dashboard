@@ -1,7 +1,22 @@
 <script lang="ts">
 	import '../app.css';
-	let { children } = $props();
 	import { ModeWatcher } from "mode-watcher";
+	import { auth } from "$lib/stores/auth";
+	import { page } from "$app/stores";
+	import { goto } from "$app/navigation";
+	import { onMount } from "svelte";
+
+	let { children } = $props();
+
+	onMount(() => {
+		const unsubscribe = auth.subscribe(value => {
+			if (!value && $page.url.pathname !== "/auth") {
+				goto("/auth");
+			}
+		});
+
+		return unsubscribe;
+	});
 </script>
 
 <ModeWatcher />
