@@ -9,7 +9,7 @@ Designed and built for my HomeLab to easily give my friends access to my compute
 - **Template Management**: Access and select templates from the Proxmox server.
 - **Automation**: Generate predefined configurations for common use cases.
 - **Remote Control**: Support for managing multiple Proxmox nodes from a single interface.
-- **User-Friendly Interface**: Designed to be intuitive and efficient, with support for Spanish and English.
+- **User-Friendly Interface**: Designed to be intuitive and efficient.
 
 ## Environment Variables
 
