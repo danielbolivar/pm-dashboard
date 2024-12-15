@@ -20,7 +20,7 @@
 		try {
 			const response = await login({ username, password });
 			auth.login(response.data);
-			goto("/");
+			goto("/dashboard");
 		} catch (e) {
 			error = "Invalid credentials";
 		} finally {

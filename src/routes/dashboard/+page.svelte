@@ -3,15 +3,8 @@
 	import { goto } from "$app/navigation";
 	import { onMount } from "svelte";
 
-	onMount(() => {
-		const unsubscribe = auth.subscribe(value => {
-			if (!value) {
-				goto("/auth");
-			}
-		});
 
-		return unsubscribe;
-	});
+
 </script>
 
 <div>
